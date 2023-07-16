@@ -22,10 +22,13 @@ void printMenu() {
 }
 
 int main() {
+	// set locale, seed rand
 	setlocale(LC_ALL, "");
 	srand(time(NULL));
+
 	// init ncurses window
 	initscr();
+	noecho();
 
 	// game start
 	printMenu();
@@ -55,35 +58,35 @@ int main() {
 		for (int j = 0; j <= 100; j++) {
 			refresh();
 			napms(napwait);
-			mvprintw(11, 0, "                        ╫?╫     ╫¢╫     ╫£╫ ");
+			mvprintw(11, 0, "                        ╫?╫     ╫¢╫     ╫£╫");
 			refresh();
 			napms(napwait);
-			mvprintw(11, 0, "                        ╫¢╫     ╫£╫     ╫?╫ ");
+			mvprintw(11, 0, "                        ╫¢╫     ╫£╫     ╫?╫");
 			refresh();
 			napms(napwait);
-			mvprintw(11, 0, "                        ╫£╫     ╫?╫     ╫¢╫ ");
+			mvprintw(11, 0, "                        ╫£╫     ╫?╫     ╫¢╫");
 		}
 		for (int j = 0; j <= 50; j++) {
 			refresh();
 			napms(napwait);
-			mvprintw(11, 0, "                        ╫%s╫     ╫¢╫     ╫£╫ ", result[0]);
+			mvprintw(11, 0, "                        ╫%s╫     ╫¢╫     ╫£╫", result[0]);
 			refresh();
 			napms(napwait);
-			mvprintw(11, 0, "                        ╫%s╫     ╫£╫     ╫?╫ ", result[0]);
+			mvprintw(11, 0, "                        ╫%s╫     ╫£╫     ╫?╫", result[0]);
 			refresh();
 			napms(napwait);
-			mvprintw(11, 0, "                        ╫%s╫     ╫?╫     ╫¢╫ ", result[0]);
+			mvprintw(11, 0, "                        ╫%s╫     ╫?╫     ╫¢╫", result[0]);
 		}
 		for (int j = 0; j <= 50; j++) {
 			refresh();
 			napms(napwait);
-			mvprintw(11, 0, "                        ╫%s╫     ╫%s╫     ╫£╫ ", result[0], result[1]);
+			mvprintw(11, 0, "                        ╫%s╫     ╫%s╫     ╫£╫", result[0], result[1]);
 			refresh();
 			napms(napwait);
-			mvprintw(11, 0, "                        ╫%s╫     ╫%s╫     ╫?╫ ", result[0], result[1]);
+			mvprintw(11, 0, "                        ╫%s╫     ╫%s╫     ╫?╫", result[0], result[1]);
 			refresh();
 			napms(napwait);
-			mvprintw(11, 0, "                        ╫%s╫     ╫%s╫     ╫¢╫ ", result[0], result[1]);
+			mvprintw(11, 0, "                        ╫%s╫     ╫%s╫     ╫¢╫", result[0], result[1]);
 		}
 
 		mvprintw(11, 0, "                        ╫%s╫     ╫%s╫     ╫%s╫", result[0], result[1], result[2]);
