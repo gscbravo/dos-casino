@@ -113,7 +113,6 @@ int main() {
 
 	// lost
 	mvprintw(12, 0, "HA HA !! You asshole, you've lost: say Bye to your Balls ...");
-	mvprintw(13, 0, "                            CREDITS : 0");
 	getch();
 
 	// end ncurses window
