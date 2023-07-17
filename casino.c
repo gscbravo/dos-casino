@@ -29,6 +29,7 @@ int main() {
 	// init ncurses window
 	initscr();
 	noecho();
+	curs_set(0);
 
 	// game start
 	printMenu();
@@ -39,11 +40,9 @@ int main() {
 	while (i > 0) {
 		// wait for key
 		mvprintw(13, 0, "                            CREDITS : %d", i);
-		move(11, 43);
 		getch();
 		i--;
 		mvprintw(13, 0, "                            CREDITS : %d", i);
-		move(11, 43);
 
 		// get random result
 		char *result[3];
